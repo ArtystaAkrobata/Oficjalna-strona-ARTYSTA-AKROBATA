@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ARTYSTA AKROBATA | Sztuka na lustrze</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #f5f0e8;
+  background: #101010;
+}
+header {
+  padding: 25px 20px;
+  text-align: center;
+  border-bottom: 1px solid #725d38;
+}
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #d6b878;
+}
+.hero {
+  min-height: 70vh;
+  padding: 80px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(ellipse at center,
+    #403321 0%, #101010 75%);
+}
+h1 {
+  font-size: clamp(38px, 9vw, 76px);
+  letter-spacing: 3px;
+  margin: 18px 0;
+}
+.gold { color: #d6b878; }
+.subtitle {
+  max-width: 560px;
+  color: #c6c0b5;
+  font-size: 18px;
+  line-height: 1.8;
+}
+.button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 30px;
+  border: 1px solid #d6b878;
+  border-radius: 4px;
+  color: #d6b878;
+  text-decoration: none;
+  font-weight: bold;
+}
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 70px 22px;
+  text-align: center;
+}
+h2 { color: #d6b878; font-size: 30px; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 35px;
+}
+.card {
+  padding: 30px 20px;
+  border: 1px solid #54452d;
+  border-radius: 10px;
+  background: #1c1b19;
+}
+.card h3 { color: #e2c68f; }
+.card p { color: #bdb8af; line-height: 1.7; }
+footer {
+  padding: 30px;
+  text-align: center;
+  border-top: 1px solid #54452d;
+  color: #999;
+  font-size: 13px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">ARTYSTA AKROBATA</div>
+</header>
+
+<main>
+  <div class="hero">
+    <p class="gold">AUTORSKA SZTUKA NA LUSTRZE</p>
+    <h1>Odbicie<br><span class="gold">sztuki.</span></h1>
+    <p class="subtitle">
+      Lustro to coś więcej niż odbicie.
+      To przestrzeń dla kreatywności,
+      precyzji i niepowtarzalnych historii.
+    </p>
+    <a class="button"
+       href="https://www.tiktok.com/@artystaakrobata"
+       target="_blank" rel="noopener">
+      ODKRYJ MOJE PRACE
+    </a>
+  </div>
+
+  <section>
+    <h2>Moja twórczość</h2>
+    <p>Każde lustro to osobny projekt,
+    tworzony z pasją i dbałością o detale.</p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Grawerowanie</h3>
+        <p>Precyzyjne wzory i detale,
+        które nadają lustrom charakter.</p>
+      </div>
+      <div class="card">
+        <h3>Matowienie szkła</h3>
+        <p>Kontrast matowych powierzchni
+        z naturalnym odbiciem lustra.</p>
+      </div>
+      <div class="card">
+        <h3>Kaligrafia</h3>
+        <p>Artystyczne liternictwo,
+        od klasycznych form po gotyk.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>ARTYSTA AKROBATA</h2>
+    <p class="subtitle" style="margin:auto">
+      Łączę rzemiosło, sztukę i własne
+      pomysły, tworząc lustra inne niż wszystkie.
+    </p>
+  </section>
+</main>
+
+<footer>
+  © 2026 ARTYSTA AKROBATA<br>
+  Autorskie lustra • Grawerowanie • Kaligrafia
+</footer>
+
+</body>
+</html>
