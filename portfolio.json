@@ -1,0 +1,191 @@
+[
+  {
+    "slug": "gks-dzik",
+    "title": "GKS Górnik Łęczna — Dzika siła",
+    "category": "Kluby i sport",
+    "filter": "Sport",
+    "images": [
+      "assets/gks-dzik-1.webp",
+      "assets/gks-dzik-2.webp",
+      "assets/gks-dzik-3.webp",
+      "assets/gks-dzik-4.webp"
+    ],
+    "desc": "Rozbudowany projekt klubowy, w którym liczą się najmniejsze kontury: od charakterystycznego dzika po symbole drużyny.",
+    "technique": "Matowienie szkła"
+  },
+  {
+    "slug": "ale-jazz",
+    "title": "ALE JAZZ — White Barber",
+    "category": "Marki i logotypy",
+    "filter": "Marki",
+    "images": [
+      "assets/ale-jazz-1.webp",
+      "assets/ale-jazz-2.webp",
+      "assets/ale-jazz-3.webp",
+      "assets/ale-jazz-4.webp"
+    ],
+    "desc": "Wzór łączący klasyczne barberskie atrybuty, liternictwo i delikatne linie saksofonu.",
+    "technique": "Matowienie szkła"
+  },
+  {
+    "slug": "godlo",
+    "title": "Orzeł Biały",
+    "category": "Symbole i sztuka",
+    "filter": "Sztuka",
+    "images": [
+      "assets/godlo-1.webp",
+      "assets/godlo-2.webp",
+      "assets/godlo-3.webp",
+      "assets/godlo-4.webp"
+    ],
+    "desc": "Autorska kompozycja polskiego orła. Ręcznie wycinane pióra i precyzyjnie dopracowany kontrast.",
+    "technique": "Matowienie szkła"
+  },
+  {
+    "slug": "tur",
+    "title": "TUR Milejów — BKS",
+    "category": "Kluby i sport",
+    "filter": "Sport",
+    "images": [
+      "assets/tur-1.webp",
+      "assets/tur-2.webp",
+      "assets/tur-3.webp",
+      "assets/tur-4.webp"
+    ],
+    "desc": "Mocna, szczegółowa kompozycja z bykiem w rękawicach. Od pierwszych konturów po gotowy efekt.",
+    "technique": "Matowienie szkła"
+  },
+  {
+    "slug": "kamila",
+    "title": "KAMILA — salon fryzjerski",
+    "category": "Marki i logotypy",
+    "filter": "Marki",
+    "images": [
+      "assets/kamila-1.webp",
+      "assets/kamila-2.webp",
+      "assets/kamila-3.webp",
+      "assets/kamila-4.webp"
+    ],
+    "desc": "Lustro wykonane dla salonu fryzjerskiego. Dekoracja i znak marki w jednym — już we wnętrzu, w którym pracuje na co dzień.",
+    "technique": "Matowienie szkła"
+  },
+  {
+    "slug": "sparrow",
+    "title": "Sparrow Sport Club",
+    "category": "Kluby i sport",
+    "filter": "Sport",
+    "images": [
+      "assets/sparrow-1.webp",
+      "assets/sparrow-2.webp",
+      "assets/sparrow-3.webp",
+      "assets/sparrow-4.webp"
+    ],
+    "desc": "Dynamiczny motyw ptaka. Lustro stworzone z pasją do ruchu i treningu.",
+    "technique": "Matowienie szkła"
+  },
+  {
+    "slug": "mural-sparrow",
+    "title": "Sparrow Club — mural ścienny",
+    "category": "Murale i dekoracje ścienne",
+    "filter": "Murale",
+    "images": [
+      "assets/mural-sparrow-nowe-1.webp",
+      "assets/mural-sparrow-final.webp",
+      "assets/mural-sparrow-nowe-2.webp",
+      "assets/mural-sparrow-nowe-3.webp"
+    ],
+    "desc": "Logo Sparrow Club przeniesione na ścianę sali treningowej. Całość została namalowana ręcznie. Logo nie jest mojego autorstwa.",
+    "technique": "Malowanie ścienne"
+  },
+  {
+    "slug": "sy-nocy",
+    "title": "SyNocy — EST. 2020",
+    "category": "Marki i logotypy",
+    "filter": "Marki",
+    "images": [
+      "assets/sy-nocy-1.webp",
+      "assets/sy-nocy-2.webp",
+      "assets/sy-nocy-3.webp",
+      "assets/sy-nocy-4.webp"
+    ],
+    "desc": "Czysty, wyrazisty logotyp i koncentryczne obramowanie. Minimalizm, w którym liczy się precyzja.",
+    "technique": "Matowienie szkła"
+  },
+  {
+    "slug": "gks-klasyk",
+    "title": "GKS Górnik Łęczna — 1979",
+    "category": "Kluby i sport",
+    "filter": "Sport",
+    "images": [
+      "assets/gks-klasyk-1.webp",
+      "assets/gks-klasyk-2.webp",
+      "assets/gks-klasyk-3.webp",
+      "assets/gks-klasyk-4.webp"
+    ],
+    "desc": "Klubowe barwy w oszczędnej kompozycji. Połączenie matowych liter, lustra i złotej ramy.",
+    "technique": "Matowienie szkła"
+  },
+  {
+    "slug": "zielu",
+    "title": "FC Barcelona — ZIELU",
+    "category": "Personalizowane",
+    "filter": "Personalizacja",
+    "images": [
+      "assets/zielu-1.webp",
+      "assets/zielu-2.webp",
+      "assets/zielu-3.webp",
+      "assets/zielu-4.webp"
+    ],
+    "desc": "Fanowski projekt z osobistym napisem. Każdy element dopasowany do konkretnego zamówienia.",
+    "technique": "Matowienie szkła"
+  },
+  {
+    "slug": "mama",
+    "title": "KC MAMA",
+    "category": "Personalizowane",
+    "filter": "Personalizacja",
+    "images": [
+      "assets/mama-1.webp",
+      "assets/mama-2.webp"
+    ],
+    "desc": "Krótka wiadomość zamieniona w niepowtarzalny prezent. Lustrzane litery na matowym tle.",
+    "technique": "Matowienie szkła"
+  },
+  {
+    "slug": "artysta",
+    "title": "ARTYSTA AKROBATA — autorskie logo",
+    "category": "Symbole i sztuka",
+    "filter": "Sztuka",
+    "images": [
+      "assets/artysta-1.webp",
+      "assets/artysta-3.webp"
+    ],
+    "desc": "Lustro z autorską identyfikacją marki: gotyckie liternictwo i wyrazisty portret.",
+    "technique": "Grawerowanie ręczne"
+  },
+  {
+    "slug": "kalistenika",
+    "title": "Kalistenika w lustrze",
+    "category": "Kluby i sport",
+    "filter": "Sport",
+    "images": [
+      "assets/kalistenika-1.webp",
+      "assets/kalistenika-2.webp",
+      "assets/kalistenika-3.webp"
+    ],
+    "desc": "Osobista inspiracja światem statyki i kalisteniki, wykonana ręcznie na lustrze.",
+    "technique": "Grawerowanie"
+  },
+  {
+    "slug": "gest",
+    "title": "Gest z charakterem",
+    "category": "Personalizowane",
+    "filter": "Personalizacja",
+    "images": [
+      "assets/gest-1.webp",
+      "assets/gest-2.webp"
+    ],
+    "desc": "Nietypowa, odważna kompozycja z przymrużeniem oka.",
+    "technique": "Matowienie szkła"
+  }
+]
