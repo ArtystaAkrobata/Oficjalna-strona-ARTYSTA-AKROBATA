@@ -42,6 +42,19 @@
     "technique": "Matowienie szkła"
   },
   {
+    "slug": "julian",
+    "title": "Pamiątka Chrztu Świętego — Julian",
+    "category": "Personalizowane",
+    "filter": "Personalizacja",
+    "images": [
+      "assets/julian-final.webp",
+      "assets/julian-detail.webp",
+      "assets/julian-process.webp"
+    ],
+    "desc": "Okrągłe lustro na pamiątkę Chrztu Świętego z portretem dziecka, ozdobnym napisem, krzyżem i roślinnymi detalami. Wzór ręcznie przeniesiony i wykończony metodą matowienia szkła.",
+    "technique": "Matowienie szkła"
+  },
+  {
     "slug": "tur",
     "title": "TUR Milejów — BKS",
     "category": "Kluby i sport",
