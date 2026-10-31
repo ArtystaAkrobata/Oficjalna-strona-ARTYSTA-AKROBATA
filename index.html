@@ -1,151 +1,313 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ARTYSTA AKROBATA | Sztuka na lustrze</title>
-<style>
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #f5f0e8;
-  background: #101010;
-}
-header {
-  padding: 25px 20px;
-  text-align: center;
-  border-bottom: 1px solid #725d38;
-}
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 4px;
-  color: #d6b878;
-}
-.hero {
-  min-height: 70vh;
-  padding: 80px 22px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: radial-gradient(ellipse at center,
-    #403321 0%, #101010 75%);
-}
-h1 {
-  font-size: clamp(38px, 9vw, 76px);
-  letter-spacing: 3px;
-  margin: 18px 0;
-}
-.gold { color: #d6b878; }
-.subtitle {
-  max-width: 560px;
-  color: #c6c0b5;
-  font-size: 18px;
-  line-height: 1.8;
-}
-.button {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 15px 30px;
-  border: 1px solid #d6b878;
-  border-radius: 4px;
-  color: #d6b878;
-  text-decoration: none;
-  font-weight: bold;
-}
-section {
-  max-width: 1000px;
-  margin: auto;
-  padding: 70px 22px;
-  text-align: center;
-}
-h2 { color: #d6b878; font-size: 30px; }
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-  margin-top: 35px;
-}
-.card {
-  padding: 30px 20px;
-  border: 1px solid #54452d;
-  border-radius: 10px;
-  background: #1c1b19;
-}
-.card h3 { color: #e2c68f; }
-.card p { color: #bdb8af; line-height: 1.7; }
-footer {
-  padding: 30px;
-  text-align: center;
-  border-top: 1px solid #54452d;
-  color: #999;
-  font-size: 13px;
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10100f">
+  <meta name="description" content="ARTYSTA AKROBATA — autorskie lustra, ręczne grawerowanie, artystyczne matowienie szkła i kaligrafia. Projekty tworzone indywidualnie, z dbałością o każdy detal.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="ARTYSTA AKROBATA — sztuka, która zmienia odbicie">
+  <meta property="og:description" content="Autorskie lustra. Grawerowanie. Matowienie szkła. Kaligrafia.">
+  <title>ARTYSTA AKROBATA — autorska sztuka na lustrze</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background:#10100f; --panel:#1a1a18; --panel-2:#20201d;
+      --line:#39362f; --gold:#ddc28d; --gold-dark:#a88b59;
+      --white:#f5f0e8; --muted:#afa99d;
+      --serif:"Cormorant Garamond", Georgia, serif;
+      --sans:Manrope, "Segoe UI", sans-serif;
+    }
+    *, *::before, *::after { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--background); color:var(--white); font-family:var(--sans); -webkit-font-smoothing:antialiased; }
+    body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:20; opacity:.12; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.68' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.1'/%3E%3C/svg%3E"); }
+    a { color:inherit; }
+    a:focus-visible, button:focus-visible { outline:2px solid var(--gold); outline-offset:5px; }
+    ::selection { background:var(--gold); color:#111; }
+    .container { width:min(1200px, calc(100% - 64px)); margin-inline:auto; }
+    .eyebrow { color:var(--gold); font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.29em; line-height:1.8; }
+    .topbar { border-bottom:1px solid rgba(221,194,141,.14); position:relative; z-index:30; background:rgba(16,16,15,.95); }
+    .nav { min-height:88px; display:flex; align-items:center; justify-content:space-between; gap:30px; }
+    .brand { display:flex; flex-direction:column; text-decoration:none; line-height:1.15; white-space:nowrap; }
+    .brand b { font-size:16px; letter-spacing:.23em; font-weight:800; }
+    .brand span { margin-top:7px; font-size:9px; letter-spacing:.34em; color:var(--gold); text-transform:uppercase; }
+    .navlinks { display:flex; align-items:center; gap:32px; }
+    .navlinks a { font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; text-decoration:none; transition:color .2s; }
+    .navlinks a:hover { color:var(--gold); }
+    .navlinks .nav-contact { padding:13px 20px; border:1px solid var(--gold-dark); color:var(--gold); }
+    .menu-toggle { display:none; border:1px solid var(--line); color:var(--white); background:transparent; padding:11px 14px; font:700 11px var(--sans); letter-spacing:.08em; cursor:pointer; }
+    .hero { overflow:hidden; position:relative; border-bottom:1px solid var(--line); }
+    .hero::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 73% 38%, #41332170 0, transparent 46%), linear-gradient(135deg,#191815 0, #10100f 65%); }
+    .hero-grid { position:relative; min-height:710px; display:grid; grid-template-columns:1.05fr .95fr; align-items:center; gap:25px; }
+    .hero-copy { padding:90px 0 110px; position:relative; z-index:2; }
+    .hero h1 { font-family:var(--serif); font-size:clamp(70px,8.5vw,124px); letter-spacing:-.047em; line-height:.87; font-weight:500; margin:28px 0 30px; }
+    .hero h1 em { font-weight:400; color:var(--gold); display:block; padding-bottom:.1em; }
+    .hero-lead { max-width:460px; color:#d0c9bd; font-size:14px; line-height:2; margin:0 0 38px; }
+    .actions { display:flex; gap:14px; align-items:center; flex-wrap:wrap; }
+    .btn { min-height:52px; display:inline-flex; gap:13px; align-items:center; justify-content:center; text-decoration:none; font-size:10px; text-transform:uppercase; font-weight:800; letter-spacing:.11em; padding:16px 24px; transition:background .2s,transform .2s,border-color .2s; }
+    .btn:hover { transform:translateY(-2px); }
+    .btn-primary { background:var(--gold); color:#15130f; border:1px solid var(--gold); }
+    .btn-primary:hover { background:#f0d7a5; }
+    .btn-outline { border:1px solid #64583f; color:var(--white); }
+    .btn-outline:hover { border-color:var(--gold); }
+    .btn .arrow { font-size:15px; font-weight:400; }
+    .hero-footnote { color:#9c9384; display:flex; align-items:center; gap:16px; margin-top:66px; font-size:10px; text-transform:uppercase; letter-spacing:.16em; }
+    .hero-footnote::before { content:""; width:40px; height:1px; background:var(--gold-dark); }
+    .hero-art { height:690px; position:relative; display:grid; place-items:center; }
+    .hero-art::before { content:""; width:430px; height:430px; background:#c79d5440; filter:blur(110px); border-radius:50%; position:absolute; }
+    .mirror { width:min(390px, 85%); aspect-ratio: .76; position:relative; border-radius:50% 50% 6px 6px / 34% 34% 6px 6px; padding:10px; background:linear-gradient(125deg,#624c2c,#e3c68c 22%,#6c5130 46%,#e7c98c 70%,#533c23); box-shadow:0 0 0 1px #e3b87530, 26px 38px 75px #0009; transform:rotate(-4deg); }
+    .mirror::after { content:""; position:absolute; height:60px; width:110%; left:-5%; bottom:-49px; background:radial-gradient(ellipse,#000b 0,transparent 73%); transform:rotate(4deg); }
+    .mirror-glass { overflow:hidden; position:relative; height:100%; border-radius:inherit; border:1px solid #e1c18c5e; background:linear-gradient(138deg,#55534f 0%,#aaa8a2 15%,#363a38 40%,#918a7d 64%,#252728 93%); }
+    .mirror-glass::before { content:""; position:absolute; inset:-50% -65%; transform:rotate(28deg); background:linear-gradient(90deg,transparent 34%,#ffffff30 42%,#ffffff05 50%,transparent 55%); }
+    .mirror-glass::after { content:""; position:absolute; inset:0; background:radial-gradient(ellipse at center,transparent 34%,#08090898 100%); }
+    .mirror-detail { position:absolute; width:80%; height:70%; top:16%; left:10%; z-index:2; }
+    .mirror-annotation { position:absolute; right:0; bottom:62px; transform:translateX(24%); z-index:3; padding:12px 15px; background:#151411ed; border:1px solid #79613d; text-transform:uppercase; font-size:8px; letter-spacing:.17em; color:var(--gold); white-space:nowrap; }
+    .hero-side { position:absolute; right:0; top:50%; writing-mode:vertical-rl; font-size:9px; letter-spacing:.27em; text-transform:uppercase; color:#ad9874; }
+    .ticker { border-bottom:1px solid var(--line); background:#181715; }
+    .ticker-inner { min-height:74px; display:flex; align-items:center; justify-content:space-around; gap:20px; flex-wrap:wrap; }
+    .ticker-item { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.2em; color:#c8bb9e; }
+    .ticker-item::before { content:"✦"; color:var(--gold); margin-right:15px; font-size:9px; }
+    section { scroll-margin-top:32px; }
+    .section { padding:115px 0; }
+    .section-head { display:flex; align-items:end; justify-content:space-between; gap:30px; margin-bottom:52px; }
+    .section h2 { font:500 clamp(47px,6.3vw,79px)/.96 var(--serif); letter-spacing:-.035em; margin:14px 0 0; }
+    .section h2 em { color:var(--gold); font-weight:400; }
+    .section-intro { color:var(--muted); max-width:350px; font-size:13px; line-height:1.95; margin:0; }
+    .practice-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .practice { border:1px solid var(--line); background:#1b1a17; min-height:315px; padding:37px 29px; position:relative; overflow:hidden; transition:transform .25s,border-color .25s; }
+    .practice:hover { transform:translateY(-5px); border-color:#8c7448; }
+    .practice::after { content:""; position:absolute; width:220px; height:220px; right:-100px; top:-105px; border:1px solid #977b4855; border-radius:50%; box-shadow:0 0 0 30px #977b4810,0 0 0 60px #977b4809; }
+    .practice .index { color:var(--gold); font:500 16px var(--serif); }
+    .practice h3 { font:500 35px/1.06 var(--serif); margin:92px 0 12px; }
+    .practice p { color:#b9b1a4; font-size:12px; line-height:1.9; max-width:300px; margin:0; }
+    .portfolio { border-block:1px solid var(--line); background:#171715; }
+    .portfolio-grid { display:grid; grid-template-columns:1.15fr 1fr 1fr; gap:15px; }
+    .work-card { display:block; text-decoration:none; min-width:0; }
+    .work-visual { height:350px; overflow:hidden; display:grid; place-items:center; border:1px solid #4c463b; position:relative; background:radial-gradient(circle at 45% 32%,#555147,#201f1d 70%); transition:border-color .2s; }
+    .work-card:hover .work-visual { border-color:var(--gold); }
+    .work-visual::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 55%,#0c0c0b88); pointer-events:none; }
+    .work-number { position:absolute; top:19px; left:22px; z-index:2; font-size:10px; color:var(--gold); letter-spacing:.2em; }
+    .art-circle { width:240px; height:240px; border-radius:50%; border:12px solid #9c8052; box-shadow:inset 0 0 0 2px #e1c991, inset 0 0 60px #0d1217, 0 0 45px #0008; background:linear-gradient(135deg,#b7b7b0 0,#404545 40%,#777871 70%,#27292a); display:grid; place-items:center; transform:rotate(-6deg); }
+    .art-circle span { font:italic 500 44px/1 var(--serif); color:#f0e0c5; text-align:center; text-shadow:0 2px 10px #0009; }
+    .art-rect { width:175px; height:270px; background:linear-gradient(145deg,#95948f,#343638 46%,#76756e); border:10px solid #a99061; box-shadow:0 0 35px #0008,inset 0 0 40px #10101090; display:grid; place-items:center; }
+    .art-rect span { font:500 75px var(--serif); color:#e8d9ba; border-block:1px solid #e8d9ba88; line-height:1.05; }
+    .art-script { width:235px; height:235px; border:2px solid #b99b66; border-radius:50%; display:grid; place-items:center; position:relative; background:radial-gradient(circle,#676761,#252626); box-shadow:0 0 0 10px #a78a5955, 0 0 50px #000a; }
+    .art-script::before,.art-script::after { content:"✦"; color:#e2c890; font-size:19px; position:absolute; }
+    .art-script::before { top:12px; } .art-script::after { bottom:12px; }
+    .art-script span { font:italic 500 49px var(--serif); color:#ede1cd; }
+    .work-meta { display:flex; align-items:center; justify-content:space-between; gap:15px; padding-top:20px; }
+    .work-meta h3 { font:500 28px var(--serif); margin:0 0 4px; }
+    .work-meta small { color:var(--muted); font-size:10px; }
+    .work-meta .arrow { color:var(--gold); font-size:20px; }
+    .portfolio-note { margin:34px 0 0; font-size:11px; color:#a6a094; line-height:1.8; }
+    .about { display:grid; grid-template-columns:.8fr 1.2fr; gap:12%; align-items:center; }
+    .about-art { min-height:450px; border:1px solid #6e5834; display:grid; place-items:center; background:radial-gradient(circle at center,#42382a,#1b1a18 75%); position:relative; }
+    .about-art::before { content:""; width:68%; aspect-ratio:1; border-radius:50%; border:1px solid var(--gold-dark); box-shadow:0 0 0 25px #c4a36b18,0 0 0 50px #c4a36b0b; }
+    .about-art .monogram { position:absolute; font:500 120px var(--serif); color:#e8cc97; letter-spacing:-.12em; transform:translateX(-7px); }
+    .about-art .micro { position:absolute; bottom:25px; color:var(--gold); text-transform:uppercase; letter-spacing:.25em; font-size:9px; }
+    .about-copy h2 { margin-bottom:25px; }
+    .about-copy p { color:#c8c1b7; font-size:13px; line-height:2.15; max-width:570px; }
+    .signature { font:italic 39px var(--serif); color:var(--gold); margin-top:30px; }
+    .process { border-top:1px solid var(--line); background:#171715; }
+    .steps { margin-top:55px; display:grid; grid-template-columns:repeat(3,1fr); gap:35px; }
+    .step { padding-top:25px; border-top:1px solid #6a5738; }
+    .step-num { font:500 40px var(--serif); color:var(--gold); }
+    .step h3 { margin:16px 0 10px; font:500 28px var(--serif); }
+    .step p { color:var(--muted); font-size:12px; line-height:1.95; max-width:280px; }
+    .contact { text-align:center; padding:110px 0 125px; border-top:1px solid var(--line); background:radial-gradient(ellipse at 50% 110%,#47362075 0%,transparent 58%); }
+    .contact h2 { font:500 clamp(58px,8.4vw,116px)/.9 var(--serif); margin:18px 0 30px; letter-spacing:-.045em; }
+    .contact h2 em { color:var(--gold); font-weight:400; }
+    .contact p { margin:0 auto 31px; max-width:480px; font-size:13px; line-height:2; color:#c6beb0; }
+    .footer { border-top:1px solid var(--line); }
+    .footer-inner { min-height:115px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    .footer small { font-size:10px; color:var(--muted); line-height:1.9; }
+    .footer a { color:var(--gold); text-decoration:none; font-size:11px; font-weight:700; }
+    @media(max-width:1000px) {
+      .navlinks { gap:18px; }
+      .hero-grid { grid-template-columns:1fr .8fr; min-height:640px; }
+      .hero-art { height:610px; }
+      .mirror { width:90%; }
+      .hero-side { display:none; }
+      .portfolio-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+      .art-circle,.art-script { width:185px; height:185px; } .art-circle { border-width:8px; }
+      .art-rect { width:155px; height:240px; }
+    }
+    @media(max-width:760px) {
+      .container { width:min(100% - 36px, 560px); }
+      .nav { min-height:75px; } .brand b { font-size:13px; }
+      .menu-toggle { display:block; }
+      .navlinks { position:absolute; left:0; right:0; top:100%; display:none; background:#181715; border-bottom:1px solid var(--line); padding:24px 18px; flex-direction:column; align-items:stretch; gap:0; }
+      .navlinks.open { display:flex; }
+      .navlinks a { padding:14px 8px; }
+      .navlinks .nav-contact { margin-top:10px; text-align:center; }
+      .hero-grid { display:flex; flex-direction:column; min-height:0; gap:0; }
+      .hero-copy { padding:75px 0 10px; width:100%; }
+      .hero h1 { font-size:clamp(65px,13.6vw,95px); margin:24px 0; }
+      .hero-lead { font-size:13px; max-width:520px; }
+      .hero-footnote { display:none; }
+      .hero-art { height:480px; width:100%; }
+      .mirror { width:260px; }
+      .mirror-annotation { right:10%; bottom:38px; }
+      .ticker-inner { padding:20px 0; gap:17px; justify-content:center; }
+      .ticker-item { font-size:9px; }
+      .section { padding:78px 0; }
+      .section-head { display:block; margin-bottom:30px; }
+      .section-intro { margin-top:19px; }
+      .practice-grid, .portfolio-grid, .steps { grid-template-columns:1fr; }
+      .practice { min-height:255px; } .practice h3 { margin-top:50px; }
+      .work-visual { height:310px; }
+      .portfolio-grid { gap:35px; }
+      .about { grid-template-columns:1fr; gap:38px; }
+      .about-art { min-height:340px; }
+      .about-art .monogram { font-size:100px; }
+      .steps { gap:25px; margin-top:38px; }
+      .contact { padding:80px 0; }
+      .footer-inner { padding:27px 0; }
+    }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; } }
+  </style>
 </head>
 <body>
-
-<header>
-  <div class="logo">ARTYSTA AKROBATA</div>
-</header>
-
-<main>
-  <div class="hero">
-    <p class="gold">AUTORSKA SZTUKA NA LUSTRZE</p>
-    <h1>Odbicie<br><span class="gold">sztuki.</span></h1>
-    <p class="subtitle">
-      Lustro to coś więcej niż odbicie.
-      To przestrzeń dla kreatywności,
-      precyzji i niepowtarzalnych historii.
-    </p>
-    <a class="button"
-       href="https://www.tiktok.com/@artystaakrobata"
-       target="_blank" rel="noopener">
-      ODKRYJ MOJE PRACE
-    </a>
-  </div>
-
-  <section>
-    <h2>Moja twórczość</h2>
-    <p>Każde lustro to osobny projekt,
-    tworzony z pasją i dbałością o detale.</p>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Grawerowanie</h3>
-        <p>Precyzyjne wzory i detale,
-        które nadają lustrom charakter.</p>
+  <header class="topbar">
+    <nav class="container nav" aria-label="Nawigacja główna">
+      <a class="brand" href="#start" aria-label="ARTYSTA AKROBATA — strona główna"><b>ARTYSTA AKROBATA</b><span>Autorska sztuka na lustrze</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">MENU ☰</button>
+      <div class="navlinks" id="navigation">
+        <a href="#tworczosc">Twórczość</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#o-mnie">O mnie</a>
+        <a href="#proces">Jak pracuję</a>
+        <a class="nav-contact" href="#kontakt">Kontakt ↗</a>
       </div>
-      <div class="card">
-        <h3>Matowienie szkła</h3>
-        <p>Kontrast matowych powierzchni
-        z naturalnym odbiciem lustra.</p>
-      </div>
-      <div class="card">
-        <h3>Kaligrafia</h3>
-        <p>Artystyczne liternictwo,
-        od klasycznych form po gotyk.</p>
+    </nav>
+  </header>
+  <main id="start">
+    <div class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Ręcznie tworzone • Niepowtarzalne • Z charakterem</div>
+          <h1>Sztuka,<br>która zmienia <em>odbicie.</em></h1>
+          <p class="hero-lead">Lustro może być czymś więcej niż przedmiotem. Tworzę autorskie prace, w których światło, grawer i matowe detale opowiadają własną historię.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#portfolio">Odkryj moją twórczość <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline" href="#kontakt">Własny projekt <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-footnote">Sztuka • Rzemiosło • Indywidualny charakter</div>
+        </div>
+        <div class="hero-art" aria-label="Dekoracyjna wizualizacja lustra z ornamentalnym wzorem" role="img">
+          <div class="mirror" aria-hidden="true">
+            <div class="mirror-glass">
+              <svg class="mirror-detail" viewBox="0 0 300 390" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <g stroke="#e7d4b0" stroke-opacity=".88" stroke-width="1.35">
+                  <path d="M150 28C100 80 88 142 150 190C212 142 200 80 150 28Z"/>
+                  <path d="M150 48C119 87 111 136 150 171C189 136 181 87 150 48Z"/>
+                  <path d="M150 190C93 189 51 234 55 288C105 299 148 273 150 190Z"/>
+                  <path d="M150 190C207 189 249 234 245 288C195 299 152 273 150 190Z"/>
+                  <path d="M150 194V352M90 321C115 310 137 319 150 351M210 321C185 310 163 319 150 351"/>
+                  <path d="M150 95V25M83 170C101 169 127 180 150 194C173 180 199 169 217 170"/>
+                  <path d="M64 251C102 250 133 225 150 192C167 225 198 250 236 251"/>
+                  <path d="M92 350H208M106 361H194"/>
+                  <circle cx="150" cy="190" r="8"/><circle cx="150" cy="26" r="5"/>
+                  <circle cx="53" cy="287" r="4"/><circle cx="247" cy="287" r="4"/>
+                </g>
+                <g fill="#e7d4b0"><circle cx="150" cy="6" r="2"/><circle cx="84" cy="165" r="2"/><circle cx="216" cy="165" r="2"/></g>
+              </svg>
+            </div>
+          </div>
+          <div class="mirror-annotation">Artystyczna wizualizacja</div>
+        </div>
+        <div class="hero-side">Artysta Akrobata / Studio</div>
       </div>
     </div>
-  </section>
-
-  <section>
-    <h2>ARTYSTA AKROBATA</h2>
-    <p class="subtitle" style="margin:auto">
-      Łączę rzemiosło, sztukę i własne
-      pomysły, tworząc lustra inne niż wszystkie.
-    </p>
-  </section>
-</main>
-
-<footer>
-  © 2026 ARTYSTA AKROBATA<br>
-  Autorskie lustra • Grawerowanie • Kaligrafia
-</footer>
-
+    <div class="ticker" aria-label="Techniki artystyczne">
+      <div class="container ticker-inner">
+        <span class="ticker-item">Grawerowanie</span><span class="ticker-item">Matowienie szkła</span><span class="ticker-item">Kaligrafia</span><span class="ticker-item">Projekty indywidualne</span>
+      </div>
+    </div>
+    <section class="section" id="tworczosc">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">01 / Moja twórczość</div><h2>Trzy techniki.<br><em>Jedna wizja.</em></h2></div>
+          <p class="section-intro">Każdy projekt powstaje z połączenia pomysłu, cierpliwości i ręcznej pracy. To detal nadaje mu indywidualny charakter.</p>
+        </div>
+        <div class="practice-grid">
+          <article class="practice"><span class="index">01 —</span><h3>Grawerowanie</h3><p>Ręcznie wykonywane linie, precyzyjne kontury i detale, które pozostają na szkle na stałe.</p></article>
+          <article class="practice"><span class="index">02 —</span><h3>Matowienie szkła</h3><p>Gra odbicia i matowej powierzchni. Kontrast, dzięki któremu zwykłe lustro nabiera nowej głębi.</p></article>
+          <article class="practice"><span class="index">03 —</span><h3>Kaligrafia</h3><p>Litery stają się częścią kompozycji — od klasycznych form po ekspresyjny gotyk.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">02 / Portfolio</div><h2>Więcej niż <em>lustro.</em></h2></div>
+          <p class="section-intro">Personalizowane wzory, symbole i autorskie kompozycje. Poniżej przykładowe kierunki estetyczne — zdjęcia moich realizacji dodam do galerii w kolejnym etapie.</p>
+        </div>
+        <div class="portfolio-grid">
+          <a class="work-card" href="#kontakt" aria-label="Zapytaj o lustra personalizowane"><div class="work-visual"><span class="work-number">01 / KONCEPCJA</span><div class="art-circle"><span>Twoja<br>historia</span></div></div><div class="work-meta"><div><h3>Personalizacja</h3><small>Lustra z dedykacją i własnym pomysłem</small></div><span class="arrow" aria-hidden="true">↗</span></div></a>
+          <a class="work-card" href="#kontakt" aria-label="Zapytaj o logo lub symbol na lustrze"><div class="work-visual"><span class="work-number">02 / KONCEPCJA</span><div class="art-rect"><span>A</span></div></div><div class="work-meta"><div><h3>Logo i symbole</h3><small>Znaki, które zyskują nową formę</small></div><span class="arrow" aria-hidden="true">↗</span></div></a>
+          <a class="work-card" href="#kontakt" aria-label="Zapytaj o artystyczną kaligrafię"><div class="work-visual"><span class="work-number">03 / KONCEPCJA</span><div class="art-script"><span>Art</span></div></div><div class="work-meta"><div><h3>Liternictwo</h3><small>Kaligrafia, ornament i światło</small></div><span class="arrow" aria-hidden="true">↗</span></div></a>
+        </div>
+        <p class="portfolio-note">Prezentowane grafiki są wizualizacjami koncepcyjnymi, a nie fotografiami gotowych prac.</p>
+      </div>
+    </section>
+    <section class="section" id="o-mnie">
+      <div class="container about">
+        <div class="about-art" aria-label="Dekoracyjny monogram AA"><div class="monogram" aria-hidden="true">AA</div><div class="micro">Tworzone z pasją</div></div>
+        <div class="about-copy">
+          <div class="eyebrow">03 / O artyście</div>
+          <h2>Nie tylko tworzę.<br><em>Szukam nowej formy.</em></h2>
+          <p>ARTYSTA AKROBATA to moja własna przestrzeń twórcza. Łączę grawerowanie, artystyczne matowienie luster i kaligrafię, szukając nieoczywistych efektów i rozwiązań.</p>
+          <p>Wierzę, że przedmiot nabiera wartości, gdy stoją za nim emocje, pomysł i ręczna praca. Każde lustro traktuję jak osobną opowieść — bez produkcji taśmowej i bez schematów.</p>
+          <div class="signature">ARTYSTA AKROBATA</div>
+        </div>
+      </div>
+    </section>
+    <section class="section process" id="proces">
+      <div class="container">
+        <div class="eyebrow">04 / Jak pracuję</div>
+        <h2>Od pomysłu do <em>efektu.</em></h2>
+        <div class="steps">
+          <article class="step"><div class="step-num">01</div><h3>Rozmowa i inspiracja</h3><p>Opowiedz mi, dla kogo ma powstać lustro, jaki klimat lubisz i co jest dla Ciebie ważne.</p></article>
+          <article class="step"><div class="step-num">02</div><h3>Indywidualny projekt</h3><p>Dobieramy motyw, układ i technikę, która najlepiej odda charakter zamówienia.</p></article>
+          <article class="step"><div class="step-num">03</div><h3>Ręczne wykonanie</h3><p>Przenoszę projekt na lustro i dopracowuję szczegóły, aż całość tworzy spójny efekt.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="kontakt">
+      <div class="container">
+        <div class="eyebrow">05 / Stwórzmy coś wyjątkowego</div>
+        <h2>Masz pomysł?<br><em>Odbijmy go w sztuce.</em></h2>
+        <p>Chcesz zamówić lustro z własnym wzorem, symbolem lub dedykacją? Napisz do mnie przez TikToka i opowiedz o swojej wizji.</p>
+        <a class="btn btn-primary" href="https://www.tiktok.com/@artystaakrobata" target="_blank" rel="noopener noreferrer">ARTYSTA AKROBATA NA TIKTOKU <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#start" aria-label="Wróć na górę"><b>ARTYSTA AKROBATA</b><span>Autorska sztuka na lustrze</span></a>
+      <small>© <span id="year">2026</span> ARTYSTA AKROBATA · Autorskie lustra, grawerowanie, kaligrafia</small>
+      <a href="https://www.tiktok.com/@artystaakrobata" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
+    </div>
+  </footer>
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navigation = document.getElementById('navigation');
+    menuButton.addEventListener('click', () => {
+      const isOpen = navigation.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.textContent = isOpen ? 'ZAMKNIJ ✕' : 'MENU ☰';
+    });
+    navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navigation.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.textContent = 'MENU ☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
