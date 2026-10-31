@@ -84,6 +84,19 @@
     "technique": "Matowienie szkła"
   },
   {
+    "slug": "mural-sparrow",
+    "title": "Sparrow Club — mural ścienny",
+    "category": "Murale i dekoracje ścienne",
+    "filter": "Murale",
+    "images": [
+      "assets/mural-sparrow-final.webp",
+      "assets/mural-sparrow-front.webp",
+      "assets/mural-sparrow-process.webp"
+    ],
+    "desc": "Ręczne odwzorowanie istniejącego logo Sparrow Sport Club na ścianie sali treningowej. Moja realizacja obejmowała przeniesienie kompozycji na dużą powierzchnię oraz wykonanie liter, symbolu ptaka i detali. Projekt graficzny logo nie jest mojego autorstwa.",
+    "technique": "Malowanie ścienne"
+  },
+  {
     "slug": "sy-nocy",
     "title": "SyNocy — EST. 2020",
     "category": "Marki i logotypy",
